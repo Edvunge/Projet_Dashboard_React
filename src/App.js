@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import HellWorld from './components/HelloWorld';
+import Pessoa from './components/Pessoa';
 
 function App() {
+  
+  const NAME = "edvaldo".toLocaleUpperCase;
+
+  function sum(a, b){
+    return a + b
+  }
+
+  const url = 'https://via.placeholder.com/150'
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Alterando o JSX</h1>
+      <p><h1>OI, {NAME}</h1></p>
+      <p>soma: {sum(2, 4)}</p>
+      <img src={url} alt="Minha Imagem" />
+      <HellWorld />
+      <Pessoa nome="Vunge" idade="27" profissao="Programador" foto="https://via.placeholder.com/150"/>
     </div>
   );
 }
